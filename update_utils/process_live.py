@@ -16,7 +16,7 @@ def get_processed_df(df):
     markets_df = get_markets()
     markets_df = markets_df.rename({'id': 'market_id'})
 
-    # 1) Make markets long: (market_id, side, asset_id) where side ∈ {"token1", "token2"}
+    
     markets_long = (
         markets_df
         .select(["market_id", "token1", "token2"])
